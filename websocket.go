@@ -217,7 +217,6 @@ func (wc *WebsocketClient) heartBeatResp(msg *Proto) (err error) {
 
 // msgResp 可以这里做回调
 func (wc *WebsocketClient) msgResp(msg *Proto) (err error) {
-	fmt.Println("sss")
 	for index, cmd := range msg.BodyMuti {
 		log.Printf("[WebsocketClient | msgResp] recv MsgResp index:%d ver:%d cmd:%s", index, msg.Version, string(cmd))
 	}
